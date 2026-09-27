@@ -4,6 +4,7 @@ import { sendQuitMessage, sendWelcomeMessage } from "@/features/messages.ts"
 import GoalTracker from "@/features/goal.ts"
 import { CommandRouter } from "@/features/command-router.ts"
 import { kickCommand } from "@/commands/kick.ts"
+import { mixCommand } from "@/commands/mix.ts"
 import { createHelpCommand } from "@/commands/utility.ts"
 
 const room: RoomObject = HBInit({
@@ -16,6 +17,7 @@ const router = new CommandRouter("!")
 
 router
   .register(kickCommand)
+  .register(mixCommand)
   .register(createHelpCommand(router))
 
 room.onPlayerJoin = (player: PlayerObject) => {
