@@ -1,0 +1,25 @@
+{
+  "name": "match-keeper",
+  "version": "1.0.0",
+  "description": "Bot integral y liviano para salas de HaxBall Headless Host",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "esbuild src/index.ts --bundle --format=esm --target=es2022 --outfile=dist/index.js",
+    "check-types": "tsc --noEmit"
+  },
+  "keywords": [
+    "haxball",
+    "headless",
+    "bot",
+    "typescript"
+  ],
+  "author": "mateocollar",
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}
